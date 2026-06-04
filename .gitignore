@@ -33,6 +33,4 @@ Thumbs.db
 .infrastructure/*.tfstate
 .infrastructure/*.tfstate.backup
 
-# package-lock files — commit the frontend's but not the root/backend
-package-lock.json
-!frontend/package-lock.json
+# package-lock files — commit all for reproducible CI installs
