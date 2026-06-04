@@ -1,8 +1,8 @@
-# JS Fullstack Template
+# TypeScript Fullstack Template
 
 **TypeScript · React · Material UI · Zustand · Fastify · AWS Lambda · S3 · CloudFront · Terraform**
 
-[![Application Unit Tests](https://github.com/WillSams/js-fullstack-template/actions/workflows/pr-validate.yml/badge.svg)](https://github.com/WillSams/js-fullstack-template/actions/workflows/pr-validate.yml)
+[![Application Unit Tests](https://github.com/WillSams/fullstack-typescript-template/actions/workflows/pr-validate.yml/badge.svg)](https://github.com/WillSams/fullstack-typescript-template/actions/workflows/pr-validate.yml)
 
 A reusable full-stack TypeScript template. Fork it, rename things, and ship.
 
@@ -62,7 +62,7 @@ The frontend is served at `http://localhost:3000` and the backend at `http://loc
 ## Project Structure
 
 ```
-js-fullstack-template/
+fullstack-typescript-template/
 ├── frontend/          # React + Zustand SPA (deploys to S3 + CloudFront)
 │   ├── src/
 │   │   ├── api/       # Axios client
