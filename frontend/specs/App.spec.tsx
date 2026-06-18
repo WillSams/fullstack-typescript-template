@@ -2,8 +2,8 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
-import App from '../App';
-import { useAppStore } from '../stores/appStore';
+import App from '../src/App';
+import { useAppStore } from '../src/stores/appStore';
 
 const theme = createTheme();
 
@@ -11,8 +11,8 @@ const renderWithProviders = (ui: React.ReactElement) =>
   render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>);
 
 // Prevent actual API calls in component tests
-vi.mock('../stores/appStore', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('../stores/appStore')>();
+vi.mock('../src/stores/appStore', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../src/stores/appStore')>();
   return {
     ...actual,
     useAppStore: vi.fn(() => ({

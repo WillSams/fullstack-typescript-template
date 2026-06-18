@@ -35,13 +35,18 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/specs/setup.ts'],
+    setupFiles: ['./specs/setup.ts'],
+    server: {
+      deps: {
+        inline: ['@mui/material', 'react-transition-group']
+      }
+    },
     typecheck: { tsconfig: './tsconfig.test.json' },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
       include: ['src/**/*.{ts,tsx}'],
-      exclude: ['src/main.tsx', 'src/specs/**', 'src/**/*.d.ts']
+      exclude: ['src/main.tsx', 'src/**/*.d.ts']
     }
   }
 });

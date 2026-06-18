@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { useAppStore } from '../stores/appStore';
-import { apiClient } from '../api/client';
+import { useAppStore } from '../src/stores/appStore';
+import { apiClient } from '../src/api/client';
 
-vi.mock('../api/client', () => ({
+vi.mock('../src/api/client', () => ({
   apiClient: {
     get: vi.fn(),
   },
