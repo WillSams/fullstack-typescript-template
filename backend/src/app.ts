@@ -6,7 +6,7 @@ export const fastify = Fastify({
 });
 
 await fastify.register(cors, {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') ?? true,
+  origin: process.env.ALLOWED_ORIGINS?.split(',') ?? 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 });
 
